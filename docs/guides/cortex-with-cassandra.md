@@ -109,10 +109,10 @@ storage:
     keyspace: KEYSPACE   # configure desired keyspace here.
 ```
 
-Run Cortex using the latest stable version:
+Run Cortex using the latest stable version (Check quay.io/cortexproject/cortex to find the latest tag):
 
 ```
-docker run -d --name=cortex -v $(pwd)/single-process-config.yaml:/etc/single-process-config.yaml -p 9009:9009  quay.io/cortexproject/cortex -config.file=/etc/single-process-config.yaml
+docker run -d --name=cortex -v $(pwd)/single-process-config.yaml:/etc/single-process-config.yaml -p 9009:9009  quay.io/cortexproject/cortex:v0.6.1 -config.file=/etc/single-process-config.yaml
 ```
 In case you prefer to run the master version, please follow this [documentation](https://github.com/cortexproject/cortex/blob/master/docs/getting_started.md) on how to build Cortex from source.
 
